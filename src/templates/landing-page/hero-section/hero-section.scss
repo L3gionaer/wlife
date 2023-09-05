@@ -1,0 +1,66 @@
+@use "../../../utils.scss" as *;
+
+.heroSection {
+    display: flex;
+    width: 100%;
+    height: heightMinusHeader();
+
+    .heroContainer {
+        display: flex;
+        margin: auto;
+        max-width: 80rem;
+
+        .heroImage {
+            display: none;
+            width: 50%;
+            object-fit: contain;
+            margin: 2rem 0 0 5rem;
+            padding-right: 2rem;
+
+            @include screen-xl {
+                display: block;
+            }
+        }
+            
+        .heroContent {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            //max-width: 30rem;
+            padding-left: 2rem;
+            margin: auto 5rem auto 0;
+
+            @include screen-xs {
+                width: 100%;
+            }
+
+            .title {
+                font-family: 'futura', sans-serif;
+                background-clip: text;
+                color: white;
+                font-size: 4.5rem;
+                font-weight: 900;
+                letter-spacing: -0.3rem;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            hr { 
+                color: white; 
+                width: 100%;
+            }
+
+            p {
+                margin: 1rem 0 1.5rem 0;
+                color: white;
+            }
+        }
+    }
+}
+
+@keyframes MOVE-BG {
+    to { 
+      background-position: -500px -500px;
+    }
+}
+

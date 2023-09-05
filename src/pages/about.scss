@@ -1,0 +1,70 @@
+@use "../utils.scss" as *;
+
+.aboutSection {
+    width: 100%;
+    height: heightMinusHeader();
+    display: flex;
+
+    .content {
+        display: grid;
+        gap: 2rem;
+        padding: 1.5rem;
+        max-width: $maxWidth;
+        margin: auto;
+        grid-template-columns: repeat(6, 1fr);
+
+        .text {
+            color: white;
+            font-size: 1.5rem;
+            margin-top: auto;
+            margin-bottom: auto;
+
+            @include screen-xs {
+                grid-column: 1 / 7;
+            }
+
+            @include screen-md {
+                grid-column: 1 / 4;
+            }
+
+            @include screen-xl {
+                grid-column: 1 / 4;
+            }
+        }
+
+        .imageContainer {
+            @include screen-xs {
+                display: none;
+            }
+
+            @include screen-md {
+                grid-column: 5 / 7;
+            }
+
+            @include screen-xl {
+                grid-column: 5 / 7;
+            }
+
+            .image {
+                width: 100%;
+                object-fit: contain;
+            }
+    
+            @include screen-xs {
+                display: none;
+            }
+        }
+    }
+}
+
+// .content {
+//     display: flex;
+//     flex-direction: row;
+//     margin: auto;
+//     max-width: 80rem;
+//     color: white;
+//     font-size: 1.5rem;
+//     text-align: center;
+//     padding: 0 2rem 0 2rem;
+//     grid-area: c;
+// }

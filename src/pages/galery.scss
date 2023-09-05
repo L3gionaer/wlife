@@ -1,0 +1,32 @@
+@use "../utils.scss" as *;
+
+#___gatsby {
+    //background: rgba(2,0,36,1);
+}
+
+.galerySection {
+    display: flex;
+    width: 100%;
+    height: heightMinusHeader();
+    padding-top: 2rem;
+
+    .galeryGrid {
+        display: grid;
+        margin: auto;
+        padding: 2rem;
+        max-width: 100rem;
+        gap: 2rem;
+
+        @include screen-xs {
+            grid-template-columns: 1fr;
+        }
+
+        @include screen-md {
+            grid-template-columns: repeat(3, 3fr);
+        }
+
+        @include screen-xl {
+            grid-template-columns: repeat(4, 4fr);
+        }
+    }
+}

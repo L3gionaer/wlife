@@ -1,0 +1,23 @@
+@mixin screen-xs {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin screen-md {
+    @media (min-width: 800px) and (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin screen-xl {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@function heightMinusHeader() {
+    @return calc(100vh - 5rem);
+}
+
+$maxWidth: 80rem;
