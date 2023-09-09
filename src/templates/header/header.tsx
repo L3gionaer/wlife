@@ -12,20 +12,8 @@ const headerItems = [
     { title: 'Kontakt', path: '/contact' },
 ];
 
-const isBrowser = () => typeof window !== "undefined"
-
 const Header: FC = () => {
     const [isOpen, setIsOpen] = useState(false);
-
-    function isActive(pathname: string): boolean {
-        if (isBrowser()) {
-            const windowPathname = window.location.pathname;
-
-            return windowPathname === pathname + '/' || windowPathname === pathname;
-        } 
-
-        return false;
-    }
 
     function toggleMenu(isOpen: boolean) {
         setIsOpen(isOpen);
@@ -49,9 +37,9 @@ const Header: FC = () => {
                     <ul>
                         {headerItems.map(({ title, path }) =>
                             <Link 
-                                to={path} 
-                                className={isActive(path) ? 'active' : ''} 
+                                to={path}  
                                 key={path}
+                                activeClassName="active"
                             >
                                 <li>
                                     {title}
