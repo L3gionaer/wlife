@@ -14,8 +14,11 @@ const AboutPage: FC<PageProps> = ({ path }) => {
                     <div className="text">
                         <h1>Über mich</h1>
                         <p>Geboren 1963 in Illingen.</p>
-                        <p>Die ersten künstlerischen Erfahrungen sammelte ich 2004 bei der freischaffenden Künstlerin Doris Obrzut-Janosik-Mayer aus Beilstein, in einem Aquarellkurs.</p>
-                        <p>Es folgten diverse Aufbaukurse zum Thema Aquarell Malerei in denen ich mich sehr intensiv mit Farbenlehre und der Wirkung der Farbe vertraut machen konnte.</p> 
+                        <p>
+                            Die ersten künstlerischen Erfahrungen sammelte ich 2004 bei der freischaffenden Künstlerin Doris Obrzut-Janosik-Mayer aus Beilstein, in einem Aquarellkurs.
+                            Es folgten diverse Aufbaukurse zum Thema Aquarell Malerei in denen ich mich sehr intensiv mit Farbenlehre und der Wirkung der Farbe vertraut machen konnte.
+                        </p>
+                        <p>- Elvira Waidmann</p>
                     </div>
                     <div className="imageContainer">
                         <img src={drawing} className="image" />

@@ -4,15 +4,21 @@ import type { HeadFC, PageProps } from "gatsby"
 
 import "./contact.scss";
 import Layout from "../templates/layout/layout";
+import contact from '../images/contact.svg';
 
 const ContactPage: FC<PageProps> = ({ path }) => {
     return (
         <Layout path={path}>
             <div className="contactPage">
-                <div className="contact">
-                    <h1>Kontakt</h1>
-                    <p>Email: info@rahmen-los.de</p>
-                    <p>Telefon: +49 1525 1057659</p>
+                <div className="content">
+                    <div className="text">
+                        <h1>Kontakt</h1>
+                        <p>Email: info@rahmen-los.de</p>
+                        <p>Telefon: +49 1525 1057659</p>
+                    </div>
+                    <div className="imageContainer">
+                        <img src={contact} className="image" />
+                    </div>
                 </div>
             </div>
         </Layout>
