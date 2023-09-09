@@ -1,15 +1,15 @@
 import * as React from "react"
 import { FC } from "react";
-import type { HeadFC, PageProps } from "gatsby";
+import type { HeadFC } from "gatsby";
 
 import Layout from "../templates/layout/layout";
 import * as images from "../images/images";
 import GaleryItem from "../templates/galery/galery-item";
 import "./galery.scss";
 
-const GaleryPage: FC<PageProps> = ({ path }) => {
+const GaleryPage: FC = () => {
     return (
-        <Layout path={path}>
+        <Layout>
             <section className="galerySection">
                 <div className="galeryGrid">
                     <h1>Galerie</h1>

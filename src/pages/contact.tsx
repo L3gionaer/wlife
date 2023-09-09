@@ -1,14 +1,14 @@
 import * as React from "react"
 import { FC } from "react";
-import type { HeadFC, PageProps } from "gatsby"
+import type { HeadFC } from "gatsby"
 
 import "./contact.scss";
 import Layout from "../templates/layout/layout";
 import contact from '../images/contact.svg';
 
-const ContactPage: FC<PageProps> = ({ path }) => {
+const ContactPage: FC = () => {
     return (
-        <Layout path={path}>
+        <Layout>
             <div className="contactPage">
                 <div className="content">
                     <div className="text">

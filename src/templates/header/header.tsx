@@ -5,10 +5,6 @@ import "./header.scss";
 import logo from "../../images/rahmenlos.png";
 import { Link } from "gatsby";
 
-export interface HeaderProps {
-    path: string;
-}
-
 const headerItems = [
     { title: 'Home', path: '/' },
     { title: 'Galerie', path: '/galery' },
@@ -16,11 +12,12 @@ const headerItems = [
     { title: 'Kontakt', path: '/contact' },
 ]
 
-const Header: FC<HeaderProps> = ({ path }) => {
+const Header: FC = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-    function isActive(pathName: string): boolean {
-        return path === pathName || path === pathName + '/';
+    function isActive(pathname: string): boolean {
+        const windowPathname = window.location.pathname;
+        return windowPathname === pathname + '/' || windowPathname === pathname;
     }
 
     function toggleMenu(isOpen: boolean) {

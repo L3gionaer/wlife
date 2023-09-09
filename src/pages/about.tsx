@@ -1,14 +1,14 @@
 import * as React from "react"
 import { FC } from "react";
-import type { HeadFC, PageProps } from "gatsby"
+import type { HeadFC } from "gatsby"
 
 import "./about.scss";
 import Layout from "../templates/layout/layout";
 import drawing from '../images/drawing.svg';
 
-const AboutPage: FC<PageProps> = ({ path }) => {
+const AboutPage: FC = () => {
     return (
-        <Layout path={path}>
+        <Layout>
             <div className="aboutSection">
                 <div className="content">
                     <div className="text">

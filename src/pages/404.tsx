@@ -3,17 +3,16 @@ import { FC } from "react";
 import type { HeadFC } from "gatsby"
 
 import "./index.scss";
-import HeroSection from "../templates/landing-page/hero-section/hero-section";
 import Layout from "../templates/layout/layout";
 
-const IndexPage: FC = () => {
+const NotFoundPage: FC = () => {
     return (
         <Layout>
-            <HeroSection />
+            404
         </Layout>
     )
 }
 
-export default IndexPage;
+export default NotFoundPage;
 
-export const Head: HeadFC = () => <title>Startseite</title>
+export const Head: HeadFC = () => <title>404 not found</title>
