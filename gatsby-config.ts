@@ -2,8 +2,8 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `wlife`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Rahmenlos`,
+    siteUrl: `https://rahmen-los.de`
   },
   graphqlTypegen: true,
   plugins: ["gatsby-plugin-sass"]
