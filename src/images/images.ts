@@ -13,3 +13,6 @@ export * as Horizont from "./horizont.jpg";
 export * as Mann_Akt from "./mann_akt.jpg";
 export * as Schwimmer from "./schwimmer.jpg";
 export * as Toskana from "./toskana.jpg";
+export * as New_Wave from "./new_wave.jpg";
+export * as Portrait from "./portrait.jpg";
+export * as Stier from "./stier.jpg";
