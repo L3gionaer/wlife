@@ -31,7 +31,18 @@
 
         h1 {
             @include title();
-            grid-column: 1 / 4;
+
+            @include screen-xs {
+                grid-column: 1;
+            }
+
+            @include screen-md {
+                grid-column: 1 / 4;
+            }
+
+            @include screen-xl {
+                grid-column: 1 / 5;
+            }
         }
     }
 }
