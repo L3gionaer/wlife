@@ -10,14 +10,21 @@ const headerItems = [
     { title: 'Galerie', path: '/galery' },
     { title: 'Über mich', path: '/about' },
     { title: 'Kontakt', path: '/contact' },
-]
+];
+
+const isBrowser = () => typeof window !== "undefined"
 
 const Header: FC = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     function isActive(pathname: string): boolean {
-        const windowPathname = window.location.pathname;
-        return windowPathname === pathname + '/' || windowPathname === pathname;
+        if (isBrowser()) {
+            const windowPathname = window.location.pathname;
+
+            return windowPathname === pathname + '/' || windowPathname === pathname;
+        } 
+
+        return false;
     }
 
     function toggleMenu(isOpen: boolean) {
