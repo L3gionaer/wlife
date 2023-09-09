@@ -1,0 +1,19 @@
+@use "../utils.scss" as *;
+
+.contactPage {
+    display: flex;
+    height: heightMinusHeader();
+    width: 100%;
+    align-items: center;
+
+    .contact {
+        margin: auto auto auto 1.5rem;
+        h1 {
+            @include title();
+        }
+
+        p {
+            color: $textColor;
+        }
+    }
+}

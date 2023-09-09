@@ -16,9 +16,9 @@ const HeroSection: FC = () => {
                         Rahmenlos
                     </h1>
                     <hr />
-                    <p>Die Auseinandersetzung mit dem gesehenem ist der Entstehungsweg ein jeden Bildes.
-                    Etwas auf sich wirken lassen und Schicht für Schicht für Schicht mit Farbe wiedergeben in seiner eigenen Interpretation.</p>
-                    <Link to="/galery">
+                    <p>Die Auseinandersetzung mit dem gesehenem ist der Entstehungsweg ein jeden Bildes.</p>
+                    <p>Etwas auf sich wirken lassen und Schicht für Schicht für Schicht mit Farbe wiedergeben in seiner eigenen Interpretation.</p>
+                    <Link to="/galery" className="link">
                         <Button>Zur Galerie</Button>
                     </Link>
                 </div>

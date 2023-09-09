@@ -20,11 +20,66 @@
             object-fit: contain;
         }
 
+        .mobileMenuButton {
+            margin-left: auto;
+            margin-right: 1.5rem;
+            display: none;
+
+            @include screen-xs {
+                display: block;
+            }
+
+            span {
+                color: white;
+                font-size: 2rem;
+                cursor: pointer;
+            }
+        }
+
         nav {
             display: flex;
+            flex-direction: column;
             align-items: start;
             margin-left: auto;
             margin-right: 1.5rem;
+
+            .close {
+                display: none;
+            }
+
+            @include screen-xs {
+                &.open {
+                    display: flex;
+                }
+
+                &.closed {
+                    display: none;
+                }
+
+                height: 100%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin-right: 0;
+                background-color: rgba(2,0,36,1);
+                width: 10rem;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+
+                .close {
+                    display: flex;
+                    color: white;
+                    height: 5rem;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: end;
+
+                    span {
+                        margin-right: 1.5rem;
+                        cursor: pointer;
+                    }
+                }
+            }
           
             ul {
                 display: flex;
@@ -33,27 +88,52 @@
                 font-family: 'Inter', sans-serif;
                 padding: 0;
                 margin: 0;
+
+                @include screen-xs {
+                    flex-direction: column;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 100%;
+                    text-align: center;
+                }
     
                 a {
                     text-decoration: none;
-                    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
                     color: white;
                     font-size: 1rem;
                     box-sizing: border-box;
+                    display: flex;
+                    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+
+                    @include screen-xs {
+                        height: 2rem;
+                    }
     
                     &:hover {
                         border-radius: 100px;
                         outline: 1px solid white;
                         cursor: pointer;
+
+                        @include screen-xs {
+                            border-radius: 0;
+                            outline: none;
+                        }
                     }
     
                     &.active {
                         background: #D9D9D9;
                         border-radius: 100px;
                         color: black;
+
+                        @include screen-xs {
+                            border-radius: 0;
+                            outline: none;
+                        }
                     }
-    
-                    
+
+                    li {
+                        margin-left: auto;
+                    }
                 }
             }
         }

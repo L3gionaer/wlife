@@ -1,5 +1,5 @@
 import * as React from "react"
-import { FC } from "react";
+import { FC, useState } from "react";
 
 import "./header.scss";
 import logo from "../../images/rahmenlos.png";
@@ -17,15 +17,31 @@ const headerItems = [
 ]
 
 const Header: FC<HeaderProps> = ({ path }) => {
+    const [isOpen, setIsOpen] = useState(false);
+
     function isActive(pathName: string): boolean {
         return path === pathName || path === pathName + '/';
+    }
+
+    function toggleMenu(isOpen: boolean) {
+        setIsOpen(isOpen);
     }
 
     return (
         <header className="header">
             <div className="navContainer">
                 <img src={logo} alt="logo" className="logo" />
-                <nav>
+                <div className="mobileMenuButton" onClick={() => toggleMenu(true)}>
+                    <span className="material-symbols-outlined">
+                        menu
+                    </span>
+                </div>
+                <nav className={isOpen ? 'open' : 'closed'}>
+                    <div className="close" onClick={() => toggleMenu(false)}>
+                        <span className="material-symbols-outlined">
+                            close
+                        </span>
+                    </div>
                     <ul>
                         {headerItems.map(({ title, path }) =>
                             <Link 

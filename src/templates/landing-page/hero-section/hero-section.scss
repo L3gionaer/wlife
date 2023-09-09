@@ -32,27 +32,34 @@
 
             @include screen-xs {
                 width: 100%;
+                padding-right: 2rem;
+                margin: auto;
             }
 
             .title {
-                font-family: 'futura', sans-serif;
-                background-clip: text;
-                color: white;
-                font-size: 4.5rem;
-                font-weight: 900;
-                letter-spacing: -0.3rem;
-                margin-top: 0;
-                margin-bottom: 0;
+                @include title();
             }
 
             hr { 
                 color: white; 
                 width: 100%;
+                margin-bottom: 1.5rem;
             }
 
             p {
-                margin: 1rem 0 1.5rem 0;
-                color: white;
+                color: $textColor;
+                margin: 0;
+                margin-bottom: 1rem;
+            }
+
+            .link {
+                margin-top: 1rem;
+
+                @include screen-xs {
+                    button {
+                        width: 100%;
+                    }
+                }
             }
         }
     }

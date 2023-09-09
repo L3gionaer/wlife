@@ -12,6 +12,7 @@ const GaleryPage: FC<PageProps> = ({ path }) => {
         <Layout path={path}>
             <section className="galerySection">
                 <div className="galeryGrid">
+                    <h1>Galerie</h1>
                     {Object.entries(images).map(([key, value]) => 
                         <GaleryItem imageSrc={value.default} imageName={key} key={key}/>
                     )}

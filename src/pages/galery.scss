@@ -28,5 +28,10 @@
         @include screen-xl {
             grid-template-columns: repeat(4, 4fr);
         }
+
+        h1 {
+            @include title();
+            grid-column: 1 / 4;
+        }
     }
 }

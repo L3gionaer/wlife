@@ -14,10 +14,14 @@
         grid-template-columns: repeat(6, 1fr);
 
         .text {
-            color: white;
+            color: $textColor;
             font-size: 1.5rem;
             margin-top: auto;
             margin-bottom: auto;
+
+            h1 {
+                @include title();
+            }
 
             @include screen-xs {
                 grid-column: 1 / 7;
@@ -33,6 +37,9 @@
         }
 
         .imageContainer {
+            margin-top: auto;
+            margin-bottom: auto;
+
             @include screen-xs {
                 display: none;
             }
