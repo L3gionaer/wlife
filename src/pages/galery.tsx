@@ -4,7 +4,7 @@ import type { HeadFC } from "gatsby";
 
 import Layout from "../templates/layout/layout";
 import * as images from "../images/images";
-import GaleryItem from "../templates/galery/galery-item";
+import GaleryItem from "../templates/galery-item/galery-item";
 import "./galery.scss";
 
 const GaleryPage: FC = () => {

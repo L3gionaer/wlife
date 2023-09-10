@@ -1,0 +1,72 @@
+@use "../theme/utils.scss" as *;
+
+.heroSection {
+    display: flex;
+    width: 100%;
+    height: $heightMinusHeader;
+
+    .heroContainer {
+        display: flex;
+        margin: auto;
+        max-width: 80rem;
+
+        .heroImage {
+            display: none;
+            width: 50%;
+            object-fit: contain;
+            margin: 2rem 0 0 5rem;
+            padding-right: 2rem;
+
+            @include screen-xl {
+                display: block;
+            }
+        }
+            
+        .heroContent {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            padding-left: 1.5rem;
+            margin: auto 5rem auto 0;
+
+            @include screen-md {
+                padding-left: 5rem;
+            }
+
+            @include screen-xs {
+                width: 100%;
+                padding-right: 2rem;
+                margin: auto;
+            }
+
+            hr { 
+                color: white; 
+                width: 100%;
+                margin-bottom: 1.5rem;
+            }
+
+            p {
+                color: $textColor;
+                margin: 0;
+                margin-bottom: 1rem;
+            }
+
+            .link {
+                margin-top: 1rem;
+
+                @include screen-xs {
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes MOVE-BG {
+    to { 
+      background-position: -500px -500px;
+    }
+}
+

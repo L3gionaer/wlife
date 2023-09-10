@@ -16,19 +16,6 @@
     }
 }
 
-@function heightMinusHeader() {
-    @return calc(100vh - 5rem);
-}
-
-@mixin title {
-    font-family: 'futura', sans-serif;
-    color: white;
-    font-size: 4.5rem;
-    font-weight: 900;
-    letter-spacing: -0.3rem;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
+$heightMinusHeader: calc(100vh - 5rem);
 $maxWidth: 80rem;
 $textColor: rgb(226, 226, 226);

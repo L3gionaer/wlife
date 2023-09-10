@@ -1,19 +1,15 @@
-@use "../utils.scss" as *;
-
-#___gatsby {
-    //background: rgba(2,0,36,1);
-}
+@use "../theme/utils.scss" as *;
 
 .galerySection {
     display: flex;
     width: 100%;
-    height: heightMinusHeader();
+    height: $heightMinusHeader;
     padding-top: 2rem;
 
     .galeryGrid {
         display: grid;
         margin: auto;
-        padding: 2rem;
+        padding: 1.5rem;
         max-width: 100rem;
         gap: 2rem;
 
@@ -30,8 +26,6 @@
         }
 
         h1 {
-            @include title();
-
             @include screen-xs {
                 grid-column: 1;
             }

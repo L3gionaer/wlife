@@ -1,8 +1,8 @@
-@use "../utils.scss" as *;
+@use "../theme/utils.scss" as *;
 
 .contactPage {
     width: 100%;
-    height: heightMinusHeader();
+    height: $heightMinusHeader;
     display: flex;
 
     .content {
@@ -29,10 +29,6 @@
 
             @include screen-xl {
                 grid-column: 1 / 3;
-            }
-
-            h1 {
-                @include title();
             }
     
             p {
