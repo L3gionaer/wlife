@@ -1,20 +1,20 @@
-name: 'deploy to GitHub Pages'
+name: "deploy to GitHub Pages"
 on:
-  push:
-    branches: [ master ]
+    commit:
+        branches: [master]
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Use Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Use Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: "18"
 
-      - name: Install Packages
-        run: npm ci
+            - name: Install Packages
+              run: npm ci
 
-      - name: Run Deploy
-        shell: bash
-        run: npm run deploy
+            - name: Run Deploy
+              shell: bash
+              run: npm run deploy
