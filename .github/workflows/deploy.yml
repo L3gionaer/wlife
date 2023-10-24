@@ -1,6 +1,6 @@
 name: "deploy to GitHub Pages"
 on:
-    commit:
+    push:
         branches: [master]
 
 jobs:
