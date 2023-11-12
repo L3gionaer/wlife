@@ -15,7 +15,6 @@ const IndexPage: FC = () => {
     useEffect(() => {
         setInterval(() => {
             setCurrentImageIndex((index) => {
-                console.log("index", index);
                 if (index === allImages.current.length - 1) {
                     return 0;
                 }
