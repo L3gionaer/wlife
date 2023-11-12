@@ -16,6 +16,40 @@
     }
 }
 
+@mixin slideInText($delay) {
+    animation: 0.3s ease-out $delay 1 slideInFromBottom;
+    animation-fill-mode: backwards;
+}
+
+@mixin slideInTextKeyframes {
+    @keyframes slideInFromBottom {
+        0% {
+            transform: translateY(10vh);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+@mixin slideInImage {
+    animation: 0.3s ease-out 0s 1 imageAnimation;
+    animation-fill-mode: backwards;
+}
+
+@mixin slideInImageKeyframe {
+    @keyframes imageAnimation {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(0%);
+        }
+    }
+}
+
 $heightMinusHeader: calc(100vh - 5rem);
 $maxWidth: 80rem;
 $textColor: rgb(226, 226, 226);

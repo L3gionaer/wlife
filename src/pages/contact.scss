@@ -30,10 +30,28 @@
             @include screen-xl {
                 grid-column: 1 / 3;
             }
-    
+
+            h1 {
+                @include slideInText(0s);
+            }
+
             p {
                 color: $textColor;
             }
+
+            p:nth-of-type(1) {
+                @include slideInText(0.1s);
+            }
+
+            p:nth-of-type(2) {
+                @include slideInText(0.2s);
+            }
+
+            p:nth-of-type(3) {
+                @include slideInText(0.3s);
+            }
+
+            @include slideInTextKeyframes;
         }
 
         .imageContainer {
@@ -58,11 +76,14 @@
             .image {
                 width: 100%;
                 object-fit: contain;
+                @include slideInImage;
             }
-    
+
             @include screen-xs {
                 display: none;
             }
+
+            @include slideInImageKeyframe;
         }
     }
-}//rgb(141,33,33)
+}

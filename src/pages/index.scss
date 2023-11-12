@@ -23,20 +23,27 @@
                 margin: auto;
             }
 
+            h1 {
+                @include slideInText(0s);
+            }
+
             hr {
                 color: white;
                 width: 100%;
                 margin-bottom: 1.5rem;
+                @include slideInText(0.1s);
             }
 
             p {
                 color: $textColor;
                 margin: 0;
                 margin-bottom: 1rem;
+                @include slideInText(0.2s);
             }
 
             .link {
                 margin-top: 1rem;
+                @include slideInText(0.3s);
 
                 @include screen-xs {
                     button {
@@ -45,6 +52,8 @@
                 }
             }
         }
+
+        @include slideInTextKeyframes;
 
         .slideshowContainer {
             display: flex;
@@ -80,11 +89,5 @@
                 }
             }
         }
-    }
-}
-
-@keyframes MOVE-BG {
-    to {
-        background-position: -500px -500px;
     }
 }

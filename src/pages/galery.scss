@@ -26,6 +26,8 @@
         }
 
         h1 {
+            @include slideInText(0s);
+
             @include screen-xs {
                 grid-column: 1;
             }
@@ -39,4 +41,6 @@
             }
         }
     }
+
+    @include slideInTextKeyframes;
 }

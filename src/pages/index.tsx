@@ -10,9 +10,13 @@ import * as images from "../images/slideshow";
 
 const IndexPage: FC = () => {
     const allImages = useRef(Object.values(images));
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [currentImageIndex, setCurrentImageIndex] = useState(-1);
 
     useEffect(() => {
+        setTimeout(() => {
+            setCurrentImageIndex(0);
+        }, 500);
+
         setInterval(() => {
             setCurrentImageIndex((index) => {
                 if (index === allImages.current.length - 1) {
@@ -54,12 +58,12 @@ const IndexPage: FC = () => {
                                                 -currentImageIndex * 100
                                             }%)`,
                                         }}
+                                        key={key}
                                     >
                                         <img
                                             src={value.default}
                                             className="heroImage"
                                             alt="hero"
-                                            key={key}
                                         />
                                     </div>
                                 )

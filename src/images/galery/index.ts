@@ -16,3 +16,4 @@ export * as Toskana from "./toskana.jpg";
 export * as New_Wave from "./new_wave.jpg";
 export * as Portrait from "./portrait.jpg";
 export * as Stier from "./stier.jpg";
+export * as Felsenstadt from "./felsenstadt.jpg";
