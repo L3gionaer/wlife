@@ -9,27 +9,51 @@
 }
 
 @keyframes zoomIn {
-    from { transform: scale(1) }
-    to { transform: scale(1.04) }
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.04);
+    }
 }
 
 .galeryItem {
-    .image {
-        width: 100%;
+    .blur-load {
         border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-        object-fit: contain;
-    
-        &:hover {
-            cursor: pointer;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+            rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+            rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+        .image {
+            display: block;
+            opacity: 0;
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+            object-position: center;
+            aspect-ratio: 4 / 3;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            @include screen-md {
+                @include animation;
+            }
+
+            @include screen-xl {
+                @include animation;
+            }
         }
 
-        @include screen-md {
-            @include animation
-        }
-
-        @include screen-xl {
-            @include animation
+        &.loaded {
+            .image {
+                opacity: 1;
+                transition: opacity 200ms ease-in-out;
+            }
         }
     }
 

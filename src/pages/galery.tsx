@@ -4,6 +4,7 @@ import type { HeadFC } from "gatsby";
 
 import Layout from "../templates/layout/layout";
 import * as images from "../images/galery";
+import * as imagesPreview from "../images/galery-preview";
 import GaleryItem from "../templates/galery-item/galery-item";
 import "./galery.scss";
 import FadeInSection from "../components/fade-in/fade-in";
@@ -18,6 +19,7 @@ const GaleryPage: FC = () => {
                         <FadeInSection key={key}>
                             <GaleryItem
                                 imageSrc={value.default}
+                                imagePreviewSrc={imagesPreview[key].default}
                                 imageName={key}
                             />
                         </FadeInSection>
