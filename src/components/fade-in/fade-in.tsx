@@ -10,20 +10,11 @@ const FadeInSection: FC<PropsWithChildren> = ({ children }) => {
 
     useEffect(() => {
         if (domRef.current) {
-            let previousY = 0;
-            let previousRatio = 0;
-
             const observer = new IntersectionObserver((entries) => {
                 for (let entry of entries) {
-                    const currentY = entry.boundingClientRect.y;
-                    const currentRatio = entry.intersectionRatio;
                     const isIntersecting = entry.isIntersecting;
 
-                    if (
-                        currentY > previousY &&
-                        currentRatio > previousRatio &&
-                        isIntersecting
-                    ) {
+                    if (isIntersecting) {
                         setVisible(true);
                     }
                 }
