@@ -3,8 +3,6 @@ import { FC, useEffect, useRef } from "react";
 
 import "./galery-item.scss";
 
-import * as previewImage from "../../images/galery-preview";
-
 interface GaleryItemProps {
     imageSrc: string;
     imagePreviewSrc: string;
